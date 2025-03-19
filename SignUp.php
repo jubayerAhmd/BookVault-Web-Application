@@ -2,8 +2,17 @@
 <html lang="en">
 <head>
     <title>User SignUp</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+
 </head>
 <body>
+
+<header class="header">
+    <?php
+    echo "BookVault " 
+    ?>
+</header>
+
     <h2>User Registration Form</h2>
     <form>
         <table border="1" cellpadding="5" cellspacing="0">
