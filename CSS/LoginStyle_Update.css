@@ -12,17 +12,18 @@ body {
 /* Login Container */
 .login-container {
     background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 50px;
+    border-radius: 15px;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 350px;
+    width: 500px;
     text-align: center;
     color: white;
 }
 
 .header h2 {
     margin-bottom: 20px;
+  
 }
 
 /* Form Styling */
@@ -35,7 +36,8 @@ body {
 }
 
 .login-form input {
-    width: 100%;
+    background: oldlace;
+    width: 150%;
     padding: 10px;
     margin-top: 5px;
     border: none;
@@ -48,20 +50,45 @@ body {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Login Button */
-.login-button {
-    background: #ff6f61;
+/* Buttons Styling */
+.login-button{
+    background: green;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 8px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     transition: 0.3s;
+    width: 50%;
+    display: inline-block;
+    text-align: Center;
+    margin-top: 20px;
 }
 
-.login-button:hover {
-    background: #ff3b2f;
+.forget-password-button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-button:hover, .forget-password-button:hover {
+    background: black;
+}
+
+/* Button Container to Align Buttons */
+.button-container {
+    display: flex;
+    gap: 10px;
 }
 
 /* Responsive Design */
