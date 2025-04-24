@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>User SignUp</title>
-    <link rel="stylesheet" href="./CSS/SignUpStyle_Update.css">
+    <link rel="stylesheet" href="./CSS/SignUpStyle.css">
 
 </head>
 <body>
