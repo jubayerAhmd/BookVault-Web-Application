@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    animation: fadeIn 500ms ease-in-out; /* Fade in animation for body */
+}
+
+/* Login Container */
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 55px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    text-align: center;
+    color: white;
+    animation: slideUp 2500ms ease-in-out; /* Slide up animation */
+}
+
+/* Header Styling */
+.header h2 {
+    margin-top: 10px;
+    font-size: 35px;
+    color: #261d9b;
+    animation: slideDown 0.5s ease-in-out; /* Slide down animation */
+}
+
+/* Form Styling */
+.login-form table {
+    width: 100%;
+}
+
+/* <-- Added gap between form rows */
+.login-form tr {
+    height: 60px;
+    animation: fadeIn 1s ease-in-out; /* Fade in each row */
+}
+
+.login-form label {
+    font-weight: bold;
+}
+
+.login-form input {
+    background: rgb(216, 205, 205);
+    width: 85%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+    animation: fadeIn 1.2s ease-in-out; /* Fade in input fields */
+}
+
+.login-form input:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Buttons Styling */
+.login-button,
+.forget-password-button {
+    margin-top: 45px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    animation: fadeIn 1.5s ease-in-out; /* Fade in buttons */
+}
+
+.login-button {
+    background: green;
+}
+
+.forget-password-button {
+    background: rgb(243, 61, 70);
+}
+
+.login-button:hover,
+.forget-password-button:hover {
+    background: black;
+}
+
+/* Button Container to Align Buttons */
+.button-container {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+
+/* Register Section */
+.register {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 15px;
+    color: #0b2fce;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.register-heading {
+    padding-bottom: 5px;
+    border-bottom: 10px solid #ee8794;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.register-heading:hover {
+    background: rgb(137, 149, 165);
+    border-radius: 80px;
+}
+
+.error-message {
+    font-size: 14px;
+    color: red;
+}
+
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%;
+    }
+
+    .login-form input {
+        width: 100%;
+    }
+
+    .button-container {
+        flex-direction: column;
+    }
+}
+
+/* ========== Animations ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
