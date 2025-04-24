@@ -101,19 +101,24 @@ body {
 /* Register Section */
 .register {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 60px;
     font-size: 15px;
     color: #0b2fce;
     animation: fadeIn 2s ease-in-out;
 }
 
 .register-heading {
-    display: inline-block;
     padding-bottom: 5px;
-    border-bottom: 2px solid #ee8794;
+    border-bottom: 10px solid #ee8794;
     font-size: 1.5em;
     font-weight: bold;
 }
+
+.register-heading:hover {
+    background: rgb(137, 149, 165);
+    border-radius: 80px;
+}
+
 
 /* Responsive Design */
 @media (max-width: 400px) {
