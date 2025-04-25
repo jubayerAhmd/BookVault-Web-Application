@@ -14,9 +14,8 @@ function validateForm() {
         document.getElementById("usernameError").innerHTML = "Username is required.";
         isValid = false;
     }
-
     // 2. Username must be at least 4 characters
-    if (username.length > 0 && username.length < 4) {
+    else if (username.length <= 4) {
         document.getElementById("usernameError").innerHTML = "Username must be at least 4 characters.";
         isValid = false;
     }
@@ -26,18 +25,18 @@ function validateForm() {
         document.getElementById("passwordError").innerHTML = "Password is required.";
         isValid = false;
     }
-
     // 4. Password must be at least 6 characters
-    if (password.length > 0 && password.length < 6) {
+    else if (password.length < 6) {
         document.getElementById("passwordError").innerHTML = "Password must be at least 6 characters.";
         isValid = false;
     }
-
     // 5. Password must contain at least one number
-    const numberPattern = /\d/;
-    if (password.length >= 6 && !numberPattern.test(password)) {
-        document.getElementById("passwordError").innerHTML = "Password must contain at least one number.";
-        isValid = false;
+    else {
+        const numberPattern = /\d/;
+        if (!numberPattern.test(password)) {
+            document.getElementById("passwordError").innerHTML = "Password must contain at least one number.";
+            isValid = false;
+        }
     }
 
     return isValid;
