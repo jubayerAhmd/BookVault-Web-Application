@@ -26,9 +26,15 @@ body {
 /* Header Styling */
 .header h2 {
     margin-top: 10px;
+    margin-left: -55px;
     font-size: 35px;
-    color: #261d9b;
-    animation: slideDown 0.5s ease-in-out; /* Slide down animation */
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    width: 580px;
+    animation: slideDown 1s ease-in-out; /* Slide down animation */
 }
 
 /* Form Styling */
