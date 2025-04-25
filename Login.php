@@ -15,19 +15,19 @@
         </header>
 
         <!-- Added onsubmit event -->
-        <form action="#" method="POST" class="login-form" onsubmit="return validateForm()">
+        <form onsubmit="return validateForm()" method="POST" class="login-form" enctype="multipart/form-data">
             <table>
                 <tr>
                     <td><label for="username">Username</label></td>
                     <td>
-                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                        <input type="text" id="username" name="username" placeholder="Enter your username">
                         <span id="usernameError" class="error-message"></span> <!-- Error span -->
                     </td>
                 </tr>
                 <tr>
                     <td><label for="password">Password</label></td>
                     <td>
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                        <input type="password" id="password" name="password" placeholder="Enter your password">
                         <span id="passwordError" class="error-message"></span> <!-- Error span -->
                     </td>
                 </tr>
