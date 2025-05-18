@@ -5,5 +5,5 @@
 # Login page Done
 # SignUp page Done
 # Style sheet Done
-# Validation done
- 
+# JS Validation Done
+# PHP Validation Done
