@@ -1,12 +1,19 @@
-<?php include './Control/LoginValidation.php' ?>
-
+<!--This used when PHP Validation-->
+<?php include './Control/LoginValidation.php' ?> 
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookVault - Login</title>
+    <title>BookVault Login</title>
     <link rel="stylesheet" href="./CSS/LoginStyle.css">
+
+    <!--This is for JS validation-->
+        <script src="./JS/LoginValidation.js" defer></script>
+    <!---->
+    <!--This is for change page using JS--
+        <script src="./JS/LoginToSignUp.js" defer></script>
+    -->
+
 </head>
 <body>
     <div class="login-container">
@@ -15,7 +22,11 @@
         </header>
 
         <!-- Added onsubmit event -->
+        <!--This used when PHP Validation-->
         <form  method="POST" class="login-form" action="">
+        <!--This used when JS Validation--
+            <form id="LoginForm" onsubmit="return validateForm()" method="POST" enctype="multipart/form-data">
+        -->
             <table>
                 <tr>
                     <td><label for="username">Username</label></td>
