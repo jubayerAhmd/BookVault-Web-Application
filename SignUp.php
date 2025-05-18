@@ -1,10 +1,19 @@
+<!-- this is for PHP validation-->
+<?php include './Control/SignUpValidation.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>User SignUp</title>
     <link rel="stylesheet" href="./CSS/SignUpStyle.css">
-    <script src="./JS/SignUpValidation.js" defer></script>
-    <script src="./JS/SignUpToLogin.js" defer></script>
+
+    <!--This is for JS validation--
+        <script src="./JS/SignUpValidation.js" defer></script>
+    -->
+    <!--This is for change page using JS--
+        <script src="./JS/SignUpToLogin.js" defer></script>
+    -->
+
 </head>
 <body>
 
@@ -14,27 +23,33 @@
 
 <h2>User Registration Form</h2>
 
+<!--This used when PHP Validation-->
+<form method="POST" action="">
+
+<!--This used when JS Validation--
 <form id="signupForm" onsubmit="return validateForm()" method="POST" enctype="multipart/form-data">
+-->
+
     <table border="1" cellpadding="5" cellspacing="0">
         <tr>
             <td>Full Name:</td>
             <td>
                 <input type="text" id="fullname" name="fullname">
-                <span id="nameError" style="color:red;"></span>
+                <span id="nameError" style="color:red;"><?php echo $errors['fullname'] ?? ''; ?></span>
             </td>
         </tr>
         <tr>
             <td>Email:</td>
             <td>
                 <input type="email" id="email" name="email">
-                <span id="emailError" style="color:red;"></span>
+                <span id="emailError" style="color:red;"><?php echo $errors['email'] ?? ''; ?></span>
             </td>
         </tr>
         <tr>
             <td>Password:</td>
             <td>
                 <input type="password" id="password" name="password">
-                <span id="passwordError" style="color:red;"></span>
+                <span id="passwordError" style="color:red;"><?php echo $errors['password'] ?? ''; ?></span>
             </td>
         </tr>
         <tr>
@@ -42,7 +57,7 @@
             <td>
                 <input type="radio" name="gender" value="Male"> Male
                 <input type="radio" name="gender" value="Female"> Female
-                <span id="genderError" style="color:red;"></span>
+                <span id="genderError" style="color:red;"><?php echo $errors['gender'] ?? ''; ?></span>
             </td>
         </tr>
         <tr>
