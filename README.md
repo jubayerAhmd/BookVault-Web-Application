@@ -1,9 +1,11 @@
-# BookVault, a web tech project.
-# Going To Make an Web application(BookVault) 
-# Task-1 Done
-# Task-2 Done
-# Login page Done
-# SignUp page Done
-# Style sheet Done
-# JS Validation Done
-# PHP Validation Done
+# 'BookVault' a Web Application project.
+# Going To develop Web application 'BookVault'.
+
+# Index page Done(Just for testing).
+# Login page Done.
+# SignUp page Done.
+# Admin page Done.
+# All page Style sheet(CSS) Done.
+# JS Validation Done.
+# PHP Validation Done.
+# MySQL Database Connection Done.
