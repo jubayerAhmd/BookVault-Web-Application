@@ -4,22 +4,42 @@ body {
     margin: 0;
     padding: 40px;
     display: flex;
+    background: linear-gradient(135deg, #4b6cb7, #182848);
     justify-content: center;
     align-items: flex-start;
+    animation: fadeIn 500ms ease-in-out; /* Fade in animation for body */
 }
 
 .admin-container {
-    background-color: white;
-    padding: 30px 40px;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 40px;
+    border-radius: 15px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 600px;
+    animation: slideUp 1200ms ease-in-out; /* Slide up animation */
 }
 
-h1 {
+.header h1{
+    margin-top: -20px;
+    margin-left: -40px;
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
     text-align: center;
-    margin-bottom: 30px;
-    color: #333;
+    background: rgba(0, 0, 0, 0.6);
+    width: 650px;
+    animation: slideDown 1s ease-in-out; /* Slide down animation */
+}
+
+.header h2{
+    margin-top: -20px;
+    font-size: 25px;
+    color: rgb(245, 197, 197);
+    font-weight: bold;
+    text-align: center;
+    width: 600px;
+    animation: slideDown 1s ease-in-out; /* Slide down animation */
 }
 
 .button-group {
@@ -44,11 +64,43 @@ h1 {
 }
 
 .data-box textarea {
-    width: 100%;
+    margin-left: -20px;
+    width: 105%;
     height: 250px;
-    padding: 15px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 5px solid #2dbcb0;
     border-radius: 5px;
-    resize: none;
+}
+
+
+/* ========== Animations ========== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
