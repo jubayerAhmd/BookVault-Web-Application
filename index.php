@@ -7,8 +7,9 @@
 </head>
 <body>
 
-    <h1 style="text-align: center; color:rgb(67, 69, 158);">This is BookVault</h1><br>
-    <h2 style="text-align: center; color:rgb(106, 236, 226);">Lots of Book</h2>
+     <h1 style="text-align: center; color:rgb(67, 69, 158);">This is BookVault</h1><br>
+     <h2 style="text-align: center; color:rgb(106, 236, 226);">Lots of Book</h2>
     
+
 </body>
 </html>
