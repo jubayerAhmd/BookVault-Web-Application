@@ -10,7 +10,7 @@ body {
     animation: fadeIn 500ms ease-in-out; /* Fade in animation for body */
 }
 
-/* Login Container */
+ /* Login Container  */
 .login-container {
     background: rgba(255, 255, 255, 0.1);
     padding: 55px;
@@ -23,7 +23,7 @@ body {
     animation: slideUp 2500ms ease-in-out; /* Slide up animation */
 }
 
-/* Header Styling */
+/* Header Styling  */
 .header h2 {
     margin-top: 10px;
     margin-left: -55px;
@@ -37,15 +37,15 @@ body {
     animation: slideDown 1s ease-in-out; /* Slide down animation */
 }
 
-/* Form Styling */
+/* Form Styling  */
 .login-form table {
     width: 100%;
 }
 
-/* <-- Added gap between form rows */
+/* <-- Added gap between form rows  */
 .login-form tr {
     height: 60px;
-    animation: fadeIn 1s ease-in-out; /* Fade in each row */
+    animation: fadeIn 1s ease-in-out;  /* Fade in each row */
 }
 
 .login-form label {
@@ -61,14 +61,14 @@ body {
     border-radius: 5px;
     outline: none;
     transition: 0.3s;
-    animation: fadeIn 1.2s ease-in-out; /* Fade in input fields */
+    animation: fadeIn 1.2s ease-in-out;  /* Fade in input fields */
 }
 
 .login-form input:focus {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Buttons Styling */
+ /* Buttons Styling */
 .login-button,
 .forget-password-button {
     margin-top: 45px;
@@ -81,7 +81,7 @@ body {
     cursor: pointer;
     font-size: 16px;
     transition: 0.3s;
-    animation: fadeIn 1.5s ease-in-out; /* Fade in buttons */
+    animation: fadeIn 1.5s ease-in-out;  /* Fade in buttons */
 }
 
 .login-button {
@@ -97,14 +97,14 @@ body {
     background: black;
 }
 
-/* Button Container to Align Buttons */
+ /* Button Container to Align Buttons */
 .button-container {
     display: flex;
     gap: 50px;
     justify-content: center;
 }
 
-/* Register Section */
+ /* Register Section */
 .register {
     text-align: center;
     margin-top: 60px;
@@ -131,7 +131,7 @@ body {
 }
 
 
-/* Responsive Design */
+ /* Responsive Design */
 @media (max-width: 400px) {
     .login-container {
         width: 90%;
@@ -146,7 +146,7 @@ body {
     }
 }
 
-/* ========== Animations ========== */
+ /* ========== Animations ========== */
 @keyframes fadeIn {
     from {
         opacity: 0;
