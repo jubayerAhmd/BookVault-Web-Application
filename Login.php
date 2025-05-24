@@ -1,18 +1,18 @@
 <!--This used when PHP Validation-->
-<?php include './Control/LoginValidation.php' ?> 
- 
+<?php include '../Control/LoginValidation.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>BookVault Login</title>
-    <link rel="stylesheet" href="./CSS/LoginStyle.css">
+    <link rel="stylesheet" href="../CSS/LoginStyle.css">
 
     <!--This is for JS validation-->
-        <script src="./JS/LoginValidation.js" defer></script>
-    <!---->
-    <!--This is for change page using JS--
-        <script src="./JS/LoginToSignUp.js" defer></script>
-    -->
+        <script src="../JS/LoginValidation.js" defer></script>
+    <!-- -->
+    <!--This is for change page using JS-->
+        <script src="../JS/LoginToSignUp.js" defer></script>
+    <!-- -->
 
 </head>
 <body>
@@ -24,9 +24,10 @@
         <!-- Added onsubmit event -->
         <!--This used when PHP Validation-->
         <form  method="POST" class="login-form" action="">
+        <!-- -->
         <!--This used when JS Validation--
             <form id="LoginForm" onsubmit="return validateForm()" method="POST" enctype="multipart/form-data">
-        -->
+         -->
             <table>
                 <tr>
                     <td><label for="username">Username</label></td>
