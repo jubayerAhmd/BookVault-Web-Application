@@ -10,6 +10,3 @@
 # PHP Validation Done.
 # MySQL Database Connection Done.
 # CRUD Loading.
-# Auth Loading.
-# MVC Loading.
-# JSON Loading.
