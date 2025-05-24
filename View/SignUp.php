@@ -1,5 +1,5 @@
 <!-- this is for PHP validation-->
-<?php include './Control/SignUpValidation.php' ?>
+<?php include '../Control/SignUpValidation.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="./CSS/SignUpStyle.css">
 
     <!--This is for JS validation--
-        <script src="./JS/SignUpValidation.js" defer></script>
+        <script src="../JS/SignUpValidation.js" defer></script>
     -->
     <!--This is for change page using JS--
-        <script src="./JS/SignUpToLogin.js" defer></script>
+        <script src="../JS/SignUpToLogin.js" defer></script>
     -->
 
 </head>
