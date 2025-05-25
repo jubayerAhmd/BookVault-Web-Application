@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin Panel</title>
-    <link rel="stylesheet" href="./CSS/AdminStyle.css">
+    <link rel="stylesheet" href="../CSS/AdminStyle.css">
 </head>
 <body>
     <div class="admin-container">
-        <h1>Admin Panel</h1>
+        <header class="header">
+            <h1>BookVault</h1>
+            <h2>Admin Panel</h2>
+
+        </header>
         
         <div class="button-group">
             <button class="crud-btn">Create</button>
@@ -21,4 +25,4 @@
         </div>
     </div>
 </body>
-</html> 
+</html>
