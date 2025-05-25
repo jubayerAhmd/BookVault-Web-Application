@@ -1,3 +1,21 @@
+<!--Create Cookie-->
+<?php
+// Start session if needed (optional)
+session_start();
+
+// Set a cookie named "visited_login" with a value and expiration time (1 hour here)
+setcookie(
+    "visited_login",   // name
+    "YES.",             // value
+    time() + 3600,     // expire (1 hour from now)
+    "/",               // path (root directory)
+    "localhost",       // domain (local server, e.g., localhost or .example.com)
+    false,             // secure (false = allow HTTP, true = only HTTPS)
+    true               // httponly (true = not accessible via JavaScript)
+);
+?>
+
+
 <!--This used when PHP Validation-->
 <?php include '../Control/LoginValidation.php' ?>
 
