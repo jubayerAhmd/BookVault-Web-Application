@@ -5,14 +5,14 @@
 <html lang="en">
 <head>
     <title>User SignUp</title>
-    <link rel="stylesheet" href="./CSS/SignUpStyle.css">
+    <link rel="stylesheet" href="../CSS/SignUpStyle.css">
 
     <!--This is for JS validation--
         <script src="../JS/SignUpValidation.js" defer></script>
     -->
-    <!--This is for change page using JS--
+    <!--This is for change page using JS-->
         <script src="../JS/SignUpToLogin.js" defer></script>
-    -->
+    <!-- -->
 
 </head>
 <body>
