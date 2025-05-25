@@ -1,6 +1,7 @@
 # 'BookVault' a Web Application project.
 # Going To develop Web application 'BookVault'.
 
+::::::::::::WorkFlow::::::::::::::::
 # Index page Done(Just for testing).
 # Login page Done.
 # SignUp page Done.
@@ -9,8 +10,11 @@
 # JS Validation Done.
 # PHP Validation Done.
 # MySQL Database Connection Done.
-# CRUD Loading.
-# Auth Loading.
-# MVC Loading.
-# JSON Loading.
+# Auth Done.
+# MVC(Model,View,Control) Done.
+# Session Done.
+# Cookie Done.
+# CRUD Loading....
+# JSON Loading...
+
 
