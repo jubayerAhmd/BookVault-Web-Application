@@ -4,18 +4,21 @@ $username = "root";         // default username in XAMPP
 $password = "";             // default password is empty
 $database = "bookvault"; // Database name
 
-//Create connection.
-$conn = new mysqli($servername, $username, $password, $database);
-
+//Create function for Database connection.
+function create_Connection():object
+{   
+// create connection object.
+$conn = new mysqli("localhost", "root", "", "bookvault");
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
 // connection success message.
-echo "Database Connected Successfully.";
-//getAllConnectionDetails($servername, $conn, $database, $username, $password);
+//echo "Database Connected Successfully.";
+return $conn;
+}
 
+//getAllConnectionDetails($servername, $conn, $database, $username, $password);
 
 function getAllConnectionDetails($servername, $conn, $database, $username, $password)
 {   
