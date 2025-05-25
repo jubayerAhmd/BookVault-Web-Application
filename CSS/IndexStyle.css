@@ -1,0 +1,65 @@
+/* Full page background image */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../Resource/background.jpg'); /* Place image in the same folder or adjust path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* Top right controls */
+.header {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent */
+}
+
+.top-right-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-form input[type="text"] {
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+}
+
+.search-form button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #44c767;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #357edd;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Centered content */
+.main-content {
+    text-align: center;
+    margin-top: 20%;
+}
+
+h1 {
+    margin-top: -50px;
+    color: rgb(3, 5, 110);
+    font-size: 48px;
+}
+
+h2 {
+    color: rgb(106, 236, 226);
+    font-size: 32px;
+}
