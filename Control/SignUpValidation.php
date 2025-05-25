@@ -1,12 +1,12 @@
 <?php
 $fullname = $email = $password = $gender = "";
-$hobbies = [];
+$hobbies = $roles = [];
 $errors = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Full Name
     if (empty($_POST["fullname"])) {
-        $errors['fullname'] = "Full Name is required.";
+        $errors['fullname'] = "Full Name is required!!";
     } else {
         $fullname = trim($_POST["fullname"]);
         if (!preg_match("/^[a-zA-Z ]*$/", $fullname)) {
@@ -16,29 +16,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Email
     if (empty($_POST["email"])) {
-        $errors['email'] = "Email is required.";
+        $errors['email'] = "Email is required!!";
     } else {
         $email = trim($_POST["email"]);
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $errors['email'] = "Invalid email format.";
+            $errors['email'] = "Invalid email format!!";
         }
     }
 
     // Password
     if (empty($_POST["password"])) {
-        $errors['password'] = "Password is required.";
+        $errors['password'] = "Password is required!!";
     } else {
         $password = $_POST["password"];
         if (strlen($password) < 6) {
-            $errors['password'] = "Password must be at least 6 characters.";
+            $errors['password'] = "Password must be at least 6 characters!!";
         }
     }
 
     // Gender
     if (empty($_POST["gender"])) {
-        $errors['gender'] = "Gender is required.";
+        $errors['gender'] = "Gender is required!!";
     } else {
         $gender = $_POST["gender"];
+    }
+
+    // Roles
+    if (empty($_POST["roles"])) {
+        $errors['roles'] = "At least one role is required!!";
+    } else {
+        $roles = $_POST["roles"];
     }
 }
 ?>
