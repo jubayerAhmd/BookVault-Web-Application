@@ -2,6 +2,12 @@
 include '../Control/SignUpValidation.php';
 include '../Model/SQL_Connection.php';
 
+// Start session.
+session_start();
+// Get Session data.
+echo 'Welcome, ' . $_SESSION['username'].'<br>';
+echo 'Your ID is: ' . $_SESSION['id'];
+
 // Initialize form variables
 $fullname = $email = $password = $gender = $country = '';
 $hobbies = $roles = [];
