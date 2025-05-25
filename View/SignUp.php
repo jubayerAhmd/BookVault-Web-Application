@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['Register'])) {
     $gender = $_POST['gender'] ?? '';
     $country = $_POST['country'] ?? '';
     $hobbies = isset($_POST['hobbies']) ? implode(",", $_POST['hobbies']) : '';
-    $roles = isset($_POST['roles']) ? implode(",", $_POST['roles']) : '';
+    $roles = $_POST['roles'] ?? '';
 
     // Checking (FullName,Email,Password,Gender,Role) is not empty.
     if (empty($fullname)) {
@@ -148,15 +148,14 @@ $conn->close();
         <tr>
             <td>Role:</td>
             <td>
-                <input type="checkbox" name="roles[]" value="Writer"> Writer
-                <input type="checkbox" name="roles[]" value="Member"> Member
+                <input type="radio" name="roles" value="Writer"> Writer
+                <input type="radio" name="roles" value="Member"> Member
                 <span id="roleError" style="color:red;"><?php echo $errors['roles'] ?? ''; ?></span>
             </td>
         </tr>
 
         <tr>
             <td colspan="2" align="center">
-                <input type="submit" onclick="goToLogin()" style="cursor: pointer;" value="Login">
                 <input type="submit" name="Register" value="Register">
                 <input type="reset" value="Clear">
             </td>
