@@ -1,7 +1,10 @@
-<!--Create Cookie-->
+<!--Create Session and Cookie-->
 <?php
-// Start session if needed (optional)
+// Start session
 session_start();
+// Set session data
+$_SESSION['username'] = 'Rakib'; // Example data
+$_SESSION['email'] = 'rakib27@example.com'; // Example data
 
 // Set a cookie named "visited_login" with a value and expiration time (1 hour here)
 setcookie(
