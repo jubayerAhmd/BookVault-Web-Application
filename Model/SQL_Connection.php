@@ -13,8 +13,8 @@ if ($conn->connect_error) {
 }
 
 // connection success message.
-getAllConnectionDetails($servername, $conn, $database, $username, $password);
-
+echo "Database Connected Successfully.";
+//getAllConnectionDetails($servername, $conn, $database, $username, $password);
 
 
 function getAllConnectionDetails($servername, $conn, $database, $username, $password)
