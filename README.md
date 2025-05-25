@@ -1,7 +1,7 @@
 # 'BookVault' a Web Application project.
 # Going To develop Web application 'BookVault'.
 
-::::::::::::WorkFlow::::::::::::::::
+# ::::::::::::WorkFlow::::::::::::::::
 # Index page Done(Just for testing).
 # Login page Done.
 # SignUp page Done.
