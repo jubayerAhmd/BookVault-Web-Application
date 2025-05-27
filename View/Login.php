@@ -19,8 +19,60 @@ setcookie(
 ?>
 
 
-<!--This used when PHP Validation-->
-<?php include '../Control/LoginValidation.php' ?>
+<!--This used when PHP Validation and connect DB-->
+<?php 
+include '../Control/LoginValidation.php';
+include '../Model/SQL_Connection.php';
+
+// Initialize form variables
+$id = 0;
+$fullname = $password = $role = '';
+$flag=true;
+
+// Database connection
+$conn = create_Connection();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['Login'])) {
+
+    // Collect and sanitize form Input data
+    $fullname = trim($_POST['username'] ?? '');
+    $password = $_POST['password'] ?? '';
+
+
+    // Checking (FullName,Email,Password,Gender,Role) is not empty.
+    if (empty($fullname)) {
+    $flag=false;
+    }
+
+    if (empty($password)) {
+    $flag=false;
+    }
+
+    if ($flag) {
+    // Use prepared statement to prevent SQL injection
+    $stmt = $conn->prepare("SELECT id, name, password, role FROM user WHERE name = ? AND password = ?");
+    $stmt->bind_param("ss", $fullname, $password); // "ss" = two strings
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        // Output data of each row
+        while ($row = $result->fetch_assoc()) {
+            echo "id: " . $row["id"] . 
+                 " - Name: " . $row["name"] . 
+                 " - Role: " . $row["role"] . "<br>";
+        }
+    } else {
+        echo "0 results";
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +105,7 @@ setcookie(
                 <tr>
                     <td><label for="username">Username</label></td>
                     <td>
-                        <input type="text" id="username" name="username<" placeholder="Enter your username">
+                        <input type="text" id="username" name="username" placeholder="Enter your username">
                         <span id="usernameError" class="error-message"><?php if(isset($usernameErr)) echo $usernameErr ?></span> <!-- Error span -->
                     </td>
                 </tr>
@@ -67,7 +119,7 @@ setcookie(
                 <tr>
                     <td colspan="2">
                         <div class="button-container">
-                            <button type="submit" class="login-button">Login</button>
+                            <button type="submit" name="Login" class="login-button">Login</button>
                             <button type="submit" class="forget-password-button">Forget Password</button>
                         </div>
                     </td>
