@@ -89,6 +89,4 @@ function getMySqlPort()
     // Return the extracted MySQL port number.
     return $mysql_port;
 }
-    // Close the connection.
-    $conn->close();
 ?>
