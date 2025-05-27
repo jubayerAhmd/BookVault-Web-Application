@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('../Resource/background.jpg'); /* Place image in the same folder or adjust path */
+    background-image: url('../Upload/background.jpg'); /* Place image in the same folder or adjust path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
