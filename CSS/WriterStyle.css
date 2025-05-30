@@ -10,7 +10,7 @@ body {
     animation: fadeIn 500ms ease-in-out; /* Fade in animation for body */
 }
 
-.admin-container {
+.writer-container {
     background: rgba(255, 255, 255, 0.1);
     padding: 15px 40px;
     border-radius: 15px;
