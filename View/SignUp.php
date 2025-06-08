@@ -1,83 +1,19 @@
 <?php
-include '../Control/SignUpValidation.php';
-include '../Model/SQL_Connection.php';
-
 // Start session.
-session_start();
+//session_start();
 // Get Session data.
-echo 'Welcome, ' . $_SESSION['username'].'<br>';
-echo 'Your ID is: ' . $_SESSION['id'];
-
-// Initialize form variables
-$fullname = $email = $password = $gender = $country = '';
-$hobbies = $roles = [];
-$success = '';
-$flag=true;
-
-// Database connection
-$conn = create_Connection();
-
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['Register'])) {
-
-    // Collect and sanitize form Input data
-    $fullname = trim($_POST['fullname'] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $password = $_POST['password'] ?? '';
-    $gender = $_POST['gender'] ?? '';
-    $country = $_POST['country'] ?? '';
-    $hobbies = isset($_POST['hobbies']) ? implode(",", $_POST['hobbies']) : '';
-    $roles = $_POST['roles'] ?? '';
-
-    // Checking (FullName,Email,Password,Gender,Role) is not empty.
-    if (empty($fullname)) {
-    $flag=false;
-    }
-
-    if (empty($email)) {
-    $flag=false;
-    }
-
-    if (empty($password)) {
-    $flag=false;
-    }
-
-    if (empty($gender)) {
-    $flag=false;
-    }
-
-    if (empty($roles)) {
-    $flag=false;
-    }
-
-    if ($flag) {
-        // Hash password
-        // $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-        $stmt = $conn->prepare("INSERT INTO user (name, email, password, gender, country, hobbie, role) VALUES (?, ?, ?, ?, ?, ?, ?)");
-        if ($stmt) {
-            $stmt->bind_param("sssssss", $fullname, $email, $password, $gender, $country, $hobbies, $roles);
-            if ($stmt->execute()) {
-                $success = "Registration successful!";
-
-            } else {
-                $errors['db'] = "Database error: " . $stmt->error;
-            }
-            $stmt->close();
-        } else {
-            $errors['db'] = "Prepare failed: " . $conn->error;
-        }
-    }
-}
-$conn->close();
+// echo 'Welcome, ' . $_SESSION['username'].'<br>';
+// echo 'Your ID is: ' . $_SESSION['id'];
+include '../Control/SignUpValidation.php';
+include '../Control/SignUpControl.php';
+include '../Model/SQL_Connection.php';
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>User SignUp</title>
     <link rel="stylesheet" href="../CSS/SignUpStyle.css">
-    <script src="../JS/SignUpToLogin.js" defer></script>
 </head>
 <body>
 
