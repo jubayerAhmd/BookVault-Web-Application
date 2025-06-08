@@ -6,7 +6,6 @@
 // echo 'Your ID is: ' . $_SESSION['id'];
 include '../Control/SignUpValidation.php';
 include '../Control/SignUpControl.php';
-include '../Model/SQL_Connection.php';
 ?>
 
 <!DOCTYPE html>
