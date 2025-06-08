@@ -1,77 +1,25 @@
 <!--Create Session and Cookie-->
 <?php
-// Start session
+// Start session.
 session_start();
 // Set session data
-$_SESSION['username'] = 'Rakib'; // Example data
-$_SESSION['id'] = '0123456789'; // Example data
+$_SESSION['username'] = 'Rakib';
+$_SESSION['id'] = '0123456789';
 
-// Set a cookie named "visited_login" with a value and expiration time (1 hour here)
+// Set a cookie.
 setcookie(
-    "visited_login",   // name
-    "YES.",             // value
-    time() + 3600,     // expire (1 hour from now)
-    "/",               // path (root directory)
-    "localhost",       // domain (local server, e.g., localhost or .example.com)
+    "visited_login",  
+    "YES.",            
+    time() + 3600,     
+    "/",            
+    "localhost",    
     false,             // secure (false = allow HTTP, true = only HTTPS)
     true               // httponly (true = not accessible via JavaScript)
 );
-?>
 
-
-<!--This used when PHP Validation and connect DB-->
-<?php 
+// This used when PHP Validation and Login to User Form.
 include '../Control/LoginValidation.php';
-include '../Model/SQL_Connection.php';
-
-// Initialize form variables
-$id = 0;
-$fullname = $password = $role = '';
-$flag=true;
-
-// Database connection
-$conn = create_Connection();
-
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['Login'])) {
-
-    // Collect and sanitize form Input data
-    $fullname = trim($_POST['username'] ?? '');
-    $password = $_POST['password'] ?? '';
-
-
-    // Checking (FullName,Email,Password,Gender,Role) is not empty.
-    if (empty($fullname)) {
-    $flag=false;
-    }
-
-    if (empty($password)) {
-    $flag=false;
-    }
-
-    if ($flag) {
-    // Use prepared statement to prevent SQL injection
-    $stmt = $conn->prepare("SELECT id, name, password, role FROM user WHERE name = ? AND password = ?");
-    $stmt->bind_param("ss", $fullname, $password); // "ss" = two strings
-    $stmt->execute();
-
-    $result = $stmt->get_result();
-
-    if ($result->num_rows > 0) {
-        // Output data of each row
-        while ($row = $result->fetch_assoc()) {
-            echo "id: " . $row["id"] . 
-                 " - Name: " . $row["name"] . 
-                 " - Role: " . $row["role"] . "<br>";
-        }
-    } else {
-        echo "0 results";
-    }
-
-    $stmt->close();
-    $conn->close();
-}
-
-}
+include '../Control/LoginControl.php';
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['Login'])) {
         <script src="../JS/LoginValidation.js" defer></script>
     <!-- -->
     <!--This is for change page using JS-->
-        <script src="../JS/LoginToSignUp.js" defer></script>
+        <script src="../JS/ChangeForm.js" defer></script>
     <!-- -->
 
 </head>
@@ -120,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['Login'])) {
                     <td colspan="2">
                         <div class="button-container">
                             <button type="submit" name="Login" class="login-button">Login</button>
-                            <button type="submit" class="forget-password-button">Forget Password</button>
+                            <h3 class="forget-password-button" onclick="goToForgetPassword()">Forget Password</h3>
                         </div>
                     </td>
                 </tr>
